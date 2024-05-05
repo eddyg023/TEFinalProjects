@@ -48,6 +48,24 @@ public class JdbcCoachDao {
         }
         return coaches;
     }
+    public List<Coach> getCoachByTeamId(int teamId) {
+        List<Coach> coaches = new ArrayList<>();
+        String sql = "SELECT coach_id, name, age, team_id " +
+                "FROM coach " +
+                "WHERE team_id = ?;";
+        try {
+            SqlRowSet results = jdbcTemplate.queryForRowSet(sql, teamId);
+            while (results.next()) {
+                Coach coach = mapRowSetToCoach(results);
+                coaches.add(coach);
+            }
+        } catch (CannotGetJdbcConnectionException e) {
+            throw new DaoException("Unable to connect to server or database", e);
+        } catch (DataIntegrityViolationException e) {
+            throw new DaoException("Data integrity violation", e);
+        }
+        return coaches;
+    }
 
     public Coach createCoach(Coach newCoach) {
         int newId;
