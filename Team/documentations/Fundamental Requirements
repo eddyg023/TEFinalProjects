@@ -1,0 +1,16 @@
+No Authority Level:
+- As an unauthenticated user, I can review a list of all coaches, players, and teams.
+- As an unauthenticated user, I can review a list of coaches by their IDs and names.
+- As an unauthenticated user, I can review a list of players by their IDs, positions, and names.
+- As an unauthenticated user, I can review a list of teams by their IDs, names, cities, and states.
+
+Authority Level Coach:
+- As an authenticated user, I can create, update, and delete a player. Deleting a player will delete the player entirely.
+- As well as anything an someone with no authority level can do.
+
+Authority Level Commissioner:
+- As an authenticated user, I can create, update, and delete a coach. Deleting a coach will delete the coach entirely.
+- As an authenticated user, I can create, update, and delete a team. Deleting a team will delete the team entirely.
+- As an authenticated user, I can create, update, and delete a users. Deleting a user will delete the user entirely.
+- As an authenticated user, I can create, update, and delete a role from a user.
+- As well as anything an Authority Level Coach and Player can do.
