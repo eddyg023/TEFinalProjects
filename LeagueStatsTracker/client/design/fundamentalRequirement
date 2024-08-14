@@ -1,0 +1,11 @@
+No Authority Level:
+- As an unauthenticated user, I can review a list of all coaches, players, and teams with their respective navigation tabs on the header or on the home page.
+- As an unauthenticated user, I can review a coach more in depth by their names, ages, the amount of years they coached and team by clicking on the specific coach.
+- As an unauthenticated user, I can review a player more in depth by their team, positions, ages, names, height, weight, stats, and jersey number by clicking on the specific player.
+- As an unauthenticated user, I can review a team more in depth by their names, cities, and states by clicking on the specific team.
+- As an unauthenticated user, I cannot add, update or delete a player, team, or coach as the form will not show up unless I am logging in as an admin.
+
+Authority Level Commissioner:
+- As an authenticated user, I can create, update, and delete a player. Deleting a player will delete the player entirely by logging in as an admin and the form will appear.
+- As an authenticated user, I can create, update, and delete a coach. Deleting a coach will delete the coach entirely by logging in as an admin and the form will appear..
+- As an authenticated user, I can create, update, and delete a team. Deleting a team will delete the team entirely by logging in as an admin and the form will appear.
